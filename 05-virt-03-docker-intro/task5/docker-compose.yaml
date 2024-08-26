@@ -1,0 +1,9 @@
+version: "3"
+services:
+  registry:
+    image: registry:2
+    network_mode: host
+    #networks:
+    #  - net
+    ports:
+      - "5001:5000"

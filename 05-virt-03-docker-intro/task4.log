@@ -1,0 +1,30 @@
+alekseykashin@MacBook-Pro-Aleksej 05-virt-03-docker-intro % docker run -it -d -v $(PWD):/data centos:latest
+Unable to find image 'centos:latest' locally
+latest: Pulling from library/centos
+52f9ef134af7: Pull complete 
+Digest: sha256:a27fd8080b517143cbbbab9dfb7c8571c40d67d534bbdee55bd6c473f432b177
+Status: Downloaded newer image for centos:latest
+8dda5b0de95ecf55bf768f78d08fa2ea3b3b391a9ee962b8a306e20b642d6291
+alekseykashin@MacBook-Pro-Aleksej 05-virt-03-docker-intro % docker run -it -d -v $(PWD):/data debian:latest  
+Unable to find image 'debian:latest' locally
+latest: Pulling from library/debian
+7b24851aa36d: Pull complete 
+Digest: sha256:aadf411dc9ed5199bc7dab48b3e6ce18f8bbee4f170127f5ff1b75cd8035eb36
+Status: Downloaded newer image for debian:latest
+0cb5f03ddb99b2de990c2dd162175d6b8d8629f09b0f706f098c4073929a5646
+alekseykashin@MacBook-Pro-Aleksej 05-virt-03-docker-intro % docker ps
+CONTAINER ID   IMAGE           COMMAND       CREATED          STATUS          PORTS     NAMES
+0cb5f03ddb99   debian:latest   "bash"        29 seconds ago   Up 28 seconds             boring_stonebraker
+8dda5b0de95e   centos:latest   "/bin/bash"   2 minutes ago    Up 2 minutes              inspiring_saha
+alekseykashin@MacBook-Pro-Aleksej 05-virt-03-docker-intro % docker exec inspiring_saha touch data/file1.txt
+alekseykashin@MacBook-Pro-Aleksej 05-virt-03-docker-intro % touch file2.txt
+alekseykashin@MacBook-Pro-Aleksej 05-virt-03-docker-intro % docker exec boring_stonebraker ls /data
+Dockerfile
+README.md
+file1.txt
+file2.txt
+image-1.png
+image.png
+index.html
+task2.log
+task3.log

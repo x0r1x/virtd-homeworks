@@ -1,0 +1,27 @@
+alekseykashin@MacBook-Pro-Aleksej 05-virt-03-docker-intro % docker run -it -d -p 8080:80 --name kashin-aleksey-sergeevich-custom-nginx-t2 ghcr.io/x0r1x/custom-nginx/nginx:1.0.0
+2a45e60aed83b4d9c4485571fd8a8d09a17bf2c0452c8550189fe9a93950f26a
+alekseykashin@MacBook-Pro-Aleksej 05-virt-03-docker-intro % docker container rename kashin-aleksey-sergeevich-custom-nginx-t2 custom-nginx-t2
+alekseykashin@MacBook-Pro-Aleksej 05-virt-03-docker-intro % date +"%d-%m-%Y %T.%N %Z" ; sleep 0.150 ; docker ps ; netstat -an | grep "8080"  ; docker logs custom-nginx-t2 -n1 ; docker exec -it custom-nginx-t2 base64 /usr/share/nginx/html/index.html
+24-08-2024 23:50:21.N MSK
+CONTAINER ID   IMAGE                                    COMMAND                  CREATED         STATUS         PORTS                  NAMES
+2a45e60aed83   ghcr.io/x0r1x/custom-nginx/nginx:1.0.0   "/docker-entrypoint.…"   9 minutes ago   Up 9 minutes   0.0.0.0:8080->80/tcp   custom-nginx-t2
+tcp46      0      0  *.8080                 *.*                    LISTEN     
+2024/08/24 20:41:01 [notice] 1#1: start worker process 42
+PGh0bWw+Cgo8aGVhZD4KICAgIEhleSwgTmV0b2xvZ3kKPC9oZWFkPgoKPGJvZHk+CiAgICA8aDE+
+SSB3aWxsIGJlIERldk9wcyBFbmdpbmVlciE8L2gxPgo8L2JvZHk+Cgo8L2h0bWw+
+
+What's next:
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug custom-nginx-t2
+    Learn more at https://docs.docker.com/go/debug-cli/
+alekseykashin@MacBook-Pro-Aleksej 05-virt-03-docker-intro % curl http://localhost:8080 
+<html>
+
+<head>
+    Hey, Netology
+</head>
+
+<body>
+    <h1>I will be DevOps Engineer!</h1>
+</body>
+
+</html>%    

@@ -1,0 +1,273 @@
+alekseykashin@MacBook-Pro-Aleksej ~ % docker ps                     
+CONTAINER ID   IMAGE                                    COMMAND                  CREATED          STATUS          PORTS                  NAMES
+2a45e60aed83   ghcr.io/x0r1x/custom-nginx/nginx:1.0.0   "/docker-entrypoint.…"   31 minutes ago   Up 11 seconds   0.0.0.0:8080->80/tcp   custom-nginx-t2
+alekseykashin@MacBook-Pro-Aleksej ~ % docker attach custom-nginx-t2
+2024/08/24 21:13:39 [notice] 35#35: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 34#34: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 33#33: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 31#31: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 32#32: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 29#29: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 1#1: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 25#25: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 27#27: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 24#24: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 26#26: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 30#30: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 28#28: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 35#35: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 34#34: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 33#33: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 32#32: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 31#31: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 30#30: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 29#29: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 28#28: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 27#27: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 26#26: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 25#25: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 24#24: signal 28 (SIGWINCH) received
+2024/08/24 21:13:39 [notice] 1#1: signal 28 (SIGWINCH) received
+^C2024/08/24 21:13:44 [notice] 35#35: signal 2 (SIGINT) received, exiting
+2024/08/24 21:13:44 [notice] 35#35: exiting
+2024/08/24 21:13:44 [notice] 34#34: signal 2 (SIGINT) received, exiting
+2024/08/24 21:13:44 [notice] 34#34: exiting
+2024/08/24 21:13:44 [notice] 35#35: exit
+2024/08/24 21:13:44 [notice] 34#34: exit
+2024/08/24 21:13:44 [notice] 33#33: signal 2 (SIGINT) received, exiting
+2024/08/24 21:13:44 [notice] 33#33: exiting
+2024/08/24 21:13:44 [notice] 33#33: exit
+2024/08/24 21:13:44 [notice] 24#24: signal 2 (SIGINT) received, exiting
+2024/08/24 21:13:44 [notice] 24#24: exiting
+2024/08/24 21:13:44 [notice] 24#24: exit
+2024/08/24 21:13:44 [notice] 31#31: signal 2 (SIGINT) received, exiting
+2024/08/24 21:13:44 [notice] 31#31: exiting
+2024/08/24 21:13:44 [notice] 32#32: signal 2 (SIGINT) received, exiting
+2024/08/24 21:13:44 [notice] 32#32: exiting
+2024/08/24 21:13:44 [notice] 31#31: exit
+2024/08/24 21:13:44 [notice] 32#32: exit
+2024/08/24 21:13:44 [notice] 30#30: signal 2 (SIGINT) received, exiting
+2024/08/24 21:13:44 [notice] 30#30: exiting
+2024/08/24 21:13:44 [notice] 30#30: exit
+2024/08/24 21:13:44 [notice] 29#29: signal 2 (SIGINT) received, exiting
+2024/08/24 21:13:44 [notice] 29#29: exiting
+2024/08/24 21:13:44 [notice] 29#29: exit
+2024/08/24 21:13:44 [notice] 28#28: signal 2 (SIGINT) received, exiting
+2024/08/24 21:13:44 [notice] 28#28: exiting
+2024/08/24 21:13:44 [notice] 28#28: exit
+2024/08/24 21:13:44 [notice] 27#27: signal 2 (SIGINT) received, exiting
+2024/08/24 21:13:44 [notice] 27#27: exiting
+2024/08/24 21:13:44 [notice] 27#27: exit
+2024/08/24 21:13:44 [notice] 26#26: signal 2 (SIGINT) received, exiting
+2024/08/24 21:13:44 [notice] 26#26: exiting
+2024/08/24 21:13:44 [notice] 1#1: signal 2 (SIGINT) received, exiting
+2024/08/24 21:13:44 [notice] 26#26: exit
+2024/08/24 21:13:44 [notice] 25#25: signal 2 (SIGINT) received, exiting
+2024/08/24 21:13:44 [notice] 25#25: exiting
+2024/08/24 21:13:44 [notice] 25#25: exit
+2024/08/24 21:13:44 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+2024/08/24 21:13:44 [notice] 1#1: worker process 34 exited with code 0
+2024/08/24 21:13:44 [notice] 1#1: worker process 35 exited with code 0
+2024/08/24 21:13:44 [notice] 1#1: signal 29 (SIGIO) received
+2024/08/24 21:13:44 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+2024/08/24 21:13:44 [notice] 1#1: worker process 28 exited with code 0
+2024/08/24 21:13:44 [notice] 1#1: worker process 31 exited with code 0
+2024/08/24 21:13:44 [notice] 1#1: worker process 32 exited with code 0
+2024/08/24 21:13:44 [notice] 1#1: worker process 33 exited with code 0
+2024/08/24 21:13:44 [notice] 1#1: signal 29 (SIGIO) received
+2024/08/24 21:13:44 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2024/08/24 21:13:44 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2024/08/24 21:13:44 [notice] 1#1: worker process 24 exited with code 0
+2024/08/24 21:13:44 [notice] 1#1: signal 29 (SIGIO) received
+2024/08/24 21:13:44 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2024/08/24 21:13:44 [notice] 1#1: worker process 25 exited with code 0
+2024/08/24 21:13:44 [notice] 1#1: worker process 26 exited with code 0
+2024/08/24 21:13:44 [notice] 1#1: worker process 29 exited with code 0
+2024/08/24 21:13:44 [notice] 1#1: signal 29 (SIGIO) received
+2024/08/24 21:13:44 [notice] 1#1: signal 17 (SIGCHLD) received from 26
+2024/08/24 21:13:44 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2024/08/24 21:13:44 [notice] 1#1: worker process 30 exited with code 0
+2024/08/24 21:13:44 [notice] 1#1: signal 17 (SIGCHLD) received from 27
+2024/08/24 21:13:44 [notice] 1#1: worker process 27 exited with code 0
+2024/08/24 21:13:44 [notice] 1#1: exit
+alekseykashin@MacBook-Pro-Aleksej ~ %  docker ps -a 
+CONTAINER ID   IMAGE                                    COMMAND                  CREATED          STATUS                     PORTS     NAMES
+2a45e60aed83   ghcr.io/x0r1x/custom-nginx/nginx:1.0.0   "/docker-entrypoint.…"   39 minutes ago   Exited (0) 6 minutes ago             custom-nginx-t2
+alekseykashin@MacBook-Pro-Aleksej ~ % docker restart custom-nginx-t2
+custom-nginx-t2
+alekseykashin@MacBook-Pro-Aleksej ~ % docker ps
+CONTAINER ID   IMAGE                                    COMMAND                  CREATED          STATUS         PORTS                  NAMES
+2a45e60aed83   ghcr.io/x0r1x/custom-nginx/nginx:1.0.0   "/docker-entrypoint.…"   41 minutes ago   Up 7 seconds   0.0.0.0:8080->80/tcp   custom-nginx-t2
+alekseykashin@MacBook-Pro-Aleksej ~ % docker exec -it custom-nginx-t2 bash  
+root@2a45e60aed83:/# apt-get update
+Get:1 http://security.debian.org/debian-security buster/updates InRelease [34.8 kB]
+Get:2 http://deb.debian.org/debian buster InRelease [122 kB]                        
+Get:3 http://security.debian.org/debian-security buster/updates/main arm64 Packages [600 kB]
+Get:4 http://deb.debian.org/debian buster-updates InRelease [56.6 kB]
+Get:5 http://deb.debian.org/debian buster/main arm64 Packages [7737 kB]
+Get:6 http://deb.debian.org/debian buster-updates/main arm64 Packages [8780 B]
+Fetched 8559 kB in 5s (1697 kB/s)                        
+Reading package lists... Done
+root@2a45e60aed83:/# apt-get install vim
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libgpm2 vim-common vim-runtime xxd
+Suggested packages:
+  gpm ctags vim-doc vim-scripts
+The following NEW packages will be installed:
+  libgpm2 vim vim-common vim-runtime xxd
+0 upgraded, 5 newly installed, 0 to remove and 56 not upgraded.
+Need to get 7340 kB of archives.
+After this operation, 33.9 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://security.debian.org/debian-security buster/updates/main arm64 xxd arm64 2:8.1.0875-5+deb10u6 [140 kB]
+Get:2 http://deb.debian.org/debian buster/main arm64 libgpm2 arm64 1.20.7-5 [34.5 kB]
+Get:3 http://security.debian.org/debian-security buster/updates/main arm64 vim-common all 2:8.1.0875-5+deb10u6 [196 kB]
+Get:4 http://security.debian.org/debian-security buster/updates/main arm64 vim-runtime all 2:8.1.0875-5+deb10u6 [5777 kB]
+Get:5 http://security.debian.org/debian-security buster/updates/main arm64 vim arm64 2:8.1.0875-5+deb10u6 [1192 kB]
+Fetched 7340 kB in 2s (3084 kB/s)
+debconf: delaying package configuration, since apt-utils is not installed
+Selecting previously unselected package xxd.
+(Reading database ... 7631 files and directories currently installed.)
+Preparing to unpack .../xxd_2%3a8.1.0875-5+deb10u6_arm64.deb ...
+Unpacking xxd (2:8.1.0875-5+deb10u6) ...
+Selecting previously unselected package vim-common.
+Preparing to unpack .../vim-common_2%3a8.1.0875-5+deb10u6_all.deb ...
+Unpacking vim-common (2:8.1.0875-5+deb10u6) ...
+Selecting previously unselected package libgpm2:arm64.
+Preparing to unpack .../libgpm2_1.20.7-5_arm64.deb ...
+Unpacking libgpm2:arm64 (1.20.7-5) ...
+Selecting previously unselected package vim-runtime.
+Preparing to unpack .../vim-runtime_2%3a8.1.0875-5+deb10u6_all.deb ...
+Adding 'diversion of /usr/share/vim/vim81/doc/help.txt to /usr/share/vim/vim81/doc/help.txt.vim-tiny by vim-runtime'
+Adding 'diversion of /usr/share/vim/vim81/doc/tags to /usr/share/vim/vim81/doc/tags.vim-tiny by vim-runtime'
+Unpacking vim-runtime (2:8.1.0875-5+deb10u6) ...
+Selecting previously unselected package vim.
+Preparing to unpack .../vim_2%3a8.1.0875-5+deb10u6_arm64.deb ...
+Unpacking vim (2:8.1.0875-5+deb10u6) ...
+Setting up libgpm2:arm64 (1.20.7-5) ...
+Setting up xxd (2:8.1.0875-5+deb10u6) ...
+Setting up vim-common (2:8.1.0875-5+deb10u6) ...
+Setting up vim-runtime (2:8.1.0875-5+deb10u6) ...
+Setting up vim (2:8.1.0875-5+deb10u6) ...
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vim (vim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vimdiff (vimdiff) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rvim (rvim) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/rview (rview) in auto mode
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/vi (vi) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/vi.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/vi.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/vi.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/vi.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/vi.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/vi.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/vi.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/vi.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group vi) doesn't exist
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/view (view) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/view.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/view.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/view.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/view.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/view.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/view.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/view.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/view.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group view) doesn't exist
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/ex (ex) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/ex.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/ex.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/ex.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/ex.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/ex.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/ex.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/ex.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/ex.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group ex) doesn't exist
+update-alternatives: using /usr/bin/vim.basic to provide /usr/bin/editor (editor) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/da/man1/editor.1.gz because associated file /usr/share/man/da/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/de/man1/editor.1.gz because associated file /usr/share/man/de/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/fr/man1/editor.1.gz because associated file /usr/share/man/fr/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/it/man1/editor.1.gz because associated file /usr/share/man/it/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ja/man1/editor.1.gz because associated file /usr/share/man/ja/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/pl/man1/editor.1.gz because associated file /usr/share/man/pl/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/ru/man1/editor.1.gz because associated file /usr/share/man/ru/man1/vim.1.gz (of link group editor) doesn't exist
+update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/vim.1.gz (of link group editor) doesn't exist
+Processing triggers for libc-bin (2.28-10) ...
+root@2a45e60aed83:/# vim /etc/nginx/conf.d/default.conf 
+root@2a45e60aed83:/# cat /etc/nginx/conf.d/default.conf
+server {
+    listen       81;
+    listen  [::]:81;
+    server_name  localhost;
+
+    #access_log  /var/log/nginx/host.access.log  main;
+
+    location / {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm;
+    }
+
+    #error_page  404              /404.html;
+
+    # redirect server error pages to the static page /50x.html
+    #
+    error_page   500 502 503 504  /50x.html;
+    location = /50x.html {
+        root   /usr/share/nginx/html;
+    }
+
+    # proxy the PHP scripts to Apache listening on 127.0.0.1:80
+    #
+    #location ~ \.php$ {
+    #    proxy_pass   http://127.0.0.1;
+    #}
+
+    # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+    #
+    #location ~ \.php$ {
+    #    root           html;
+    #    fastcgi_pass   127.0.0.1:9000;
+    #    fastcgi_index  index.php;
+    #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+    #    include        fastcgi_params;
+    #}
+
+    # deny access to .htaccess files, if Apache's document root
+    # concurs with nginx's one
+    #
+    #location ~ /\.ht {
+    #    deny  all;
+    #}
+}
+
+root@2a45e60aed83:/# nginx -s reload
+2024/08/24 21:31:24 [notice] 435#435: signal process started
+root@2a45e60aed83:/# curl http://127.0.0.1:80
+curl: (7) Failed to connect to 127.0.0.1 port 80: Connection refused
+root@2a45e60aed83:/# curl http://127.0.0.1:81
+<html>
+
+<head>
+    Hey, Netology
+</head>
+
+<body>
+    <h1>I will be DevOps Engineer!</h1>
+</body>
+
+</html>root@2a45e60aed83:/# exit
+exit
+
+What's next:
+    Try Docker Debug for seamless, persistent debugging tools in any container or image → docker debug custom-nginx-t2
+    Learn more at https://docs.docker.com/go/debug-cli/
+alekseykashin@MacBook-Pro-Aleksej 05-virt-03-docker-intro % netstat -an | grep "8080"
+tcp46      0      0  *.8080                 *.*                    LISTEN     
+alekseykashin@MacBook-Pro-Aleksej 05-virt-03-docker-intro % docker port custom-nginx-t2
+80/tcp -> 0.0.0.0:8080
+alekseykashin@MacBook-Pro-Aleksej 05-virt-03-docker-intro % curl http://127.0.0.1:8080
+curl: (56) Recv failure: Connection reset by peer
+alekseykashin@MacBook-Pro-Aleksej 05-virt-03-docker-intro % Мы настроили слушателя в место 80 на 81 порт  
+zsh: command not found: Мы
+alekseykashin@MacBook-Pro-Aleksej 05-virt-03-docker-intro % docker rm -f custom-nginx-t2       
+custom-nginx-t2
