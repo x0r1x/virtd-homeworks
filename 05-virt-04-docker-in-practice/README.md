@@ -347,6 +347,7 @@ alekseykashin@MBP-Aleksej shvirtd-example-python % cat ~/.docker/config.json
 3. Загружаем образ в ``test`` registry ya cloud
 
 ```
+red0c@nettlogy-web:/opt/shvirtd-example-python$ sudo apt  install docker-compose
 alekseykashin@MBP-Aleksej shvirtd-example-python %  docker tag back_service cr.yandex/crpr851ktv8huaqmc41c/back_service:latest
 alekseykashin@MBP-Aleksej shvirtd-example-python % docker image ls                                                            
 REPOSITORY                                    TAG       IMAGE ID       CREATED        SIZE
@@ -556,49 +557,75 @@ mysql> SELECT * from web_requests LIMIT 10;.
 2. Подключаемся к ВМ 
 
 ```
-alekseykashin@MBP-Aleksej shvirtd-example-python % ssh red0c@51.250.83.154 
-The authenticity of host '51.250.83.154 (51.250.83.154)' can't be established.
-ED25519 key fingerprint is SHA256:nyJN2qI9AU9gWCUHGl7xr6Y+YPJJ9L73pY97AhF0PnI.
-This key is not known by any other names.
-Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-Warning: Permanently added '51.250.83.154' (ED25519) to the list of known hosts.
-Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-73-generic x86_64)
-
- * Documentation:  https://help.ubuntu.com
- * Management:     https://landscape.canonical.com
- * Support:        https://ubuntu.com/advantage
-
-  System information as of Sun Sep  1 11:01:12 PM MSK 2024
-
-  System load:  1.30517578125      Processes:                133
-  Usage of /:   20.7% of 29.44GB   Users logged in:          0
-  Memory usage: 12%                IPv4 address for docker0: 172.17.0.1
-  Swap usage:   0%                 IPv4 address for eth0:    10.1.2.11
-
-
-Expanded Security Maintenance for Applications is not enabled.
-
-0 updates can be applied immediately.
-
-Enable ESM Apps to receive additional future security updates.
-See https://ubuntu.com/esm or run: sudo pro status
-
-
-The list of available updates is more than a week old.
-To check for new updates run: sudo apt update
-
-
-The programs included with the Ubuntu system are free software;
-the exact distribution terms for each program are described in the
-individual files in /usr/share/doc/*/copyright.
-
-Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
-applicable law.
-
-red0c@nettlogy-web:~$ 
 ```
 
 3.
+
+```
+sudo apt update
+sudo apt-get update
+red0c@compute-vm-2-2-30-hdd-1725229033417:~$ DOCKER_CONFIG=${DOCKER_CONFIG:-$HOME/.docker}
+mkdir -p $DOCKER_CONFIG/cli-plugins
+curl -SL https://github.com/docker/compose/releases/download/v2.29.2/docker-compose-linux-x86_64 -o $DOCKER_CONFIG/cli-plugins/docker-compose
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 60.2M  100 60.2M    0     0  26.2M      0  0:00:02  0:00:02 --:--:-- 37.7M
+red0c@compute-vm-2-2-30-hdd-1725229033417:~$ ~/.docker/cli-plugins
+-bash: /home/red0c/.docker/cli-plugins: Is a directory
+red0c@compute-vm-2-2-30-hdd-1725229033417:~$ cd ~/.docker/cli-plugins
+red0c@compute-vm-2-2-30-hdd-1725229033417:~/.docker/cli-plugins$ ls
+docker-compose
+red0c@compute-vm-2-2-30-hdd-1725229033417:~/.docker/cli-plugins$ cd /usr/local/lib/docker/cli-plugins.
+-bash: cd: /usr/local/lib/docker/cli-plugins.: No such file or directory
+red0c@compute-vm-2-2-30-hdd-1725229033417:~/.docker/cli-plugins$ cd /usr/local/lib/docker/cli-plugins.
+-bash: cd: /usr/local/lib/docker/cli-plugins.: No such file or directory
+red0c@compute-vm-2-2-30-hdd-1725229033417:~/.docker/cli-plugins$ cd /usr/local/lib/docker/cli-plugins
+-bash: cd: /usr/local/lib/docker/cli-plugins: No such file or directory
+red0c@compute-vm-2-2-30-hdd-1725229033417:~/.docker/cli-plugins$ ls
+docker-compose
+red0c@compute-vm-2-2-30-hdd-1725229033417:~/.docker/cli-plugins$ chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
+red0c@compute-vm-2-2-30-hdd-1725229033417:~/.docker/cli-plugins$ sudo chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
+chmod: cannot access '/usr/local/lib/docker/cli-plugins/docker-compose': No such file or directory
+red0c@compute-vm-2-2-30-hdd-1725229033417:~/.docker/cli-plugins$ docker compose version
+Docker Compose version v2.29.2
+```
+
+```
+
+sudo apt update
+
+red0c@web:/opt/shvirtd-example-python$ sudo snap remove docker
+docker removed
+red0c@web:/opt/shvirtd-example-python$ sudo apt install docker.io
+
+
+
+red0c@web:~$ sudo apt-get update
+Hit:1 http://mirror.yandex.ru/ubuntu jammy InRelease
+sudo apt-get install docker 
+
+
+red0c@nettlogy-web:/opt$ cd /opt/shvirtd-example-python
+red0c@nettlogy-web:/opt/shvirtd-example-python$ sudo apt-get update
+red0c@nettlogy-web:/opt/shvirtd-example-python$ sudo apt-get install docker-compose-plugin
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package docker-compose-plugin
+
+
+red0c@nettlogy-web:/opt$ sudo git clone https://github.com/x0r1x/shvirtd-example-python.git /opt/shvirtd-example-python
+Cloning into '/opt/shvirtd-example-python'...
+remote: Enumerating objects: 2170, done.
+remote: Counting objects: 100% (1769/1769), done.
+remote: Compressing objects: 100% (1574/1574), done.
+remote: Total 2170 (delta 201), reused 1447 (delta 185), pack-reused 401 (from 1)
+Receiving objects: 100% (2170/2170), 11.18 MiB | 13.66 MiB/s, done.
+Resolving deltas: 100% (228/228), done.
+red0c@nettlogy-web:/opt$ ls
+containerd  shvirtd-example-python  yc
+```
 
 ## Задача 5 (*)
 1. Напишите и задеплойте на вашу облачную ВМ bash скрипт, который произведет резервное копирование БД mysql в директорию "/opt/backup" с помощью запуска в сети "backend" контейнера из образа ```schnitzler/mysqldump``` при помощи ```docker run ...``` команды. Подсказка: "документация образа."
